@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Study Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Study with Purpose</h1>
+        <p id="quote">"Non scholae, sed vitae discimus." — Seneca</p>
+    </header>
+
+    <main>
+        <section class="timer-container">
+            <h2 id="clock">25:00</h2>
+            <div class="controls">
+                <button id="startStopBtn">Start</button>
+                <button id="resetBtn">Reset</button>
+                <div class="time-adjust">
+                    <label for="workTime">Work:</label>
+                    <input type="number" id="workTime" value="25" min="1"> min
+                    <label for="breakTime">Break:</label>
+                    <input type="number" id="breakTime" value="5" min="1"> min
+                </div>
+            </div>
+        </section>
+
+        <section class="music-container">
+            <h3>Select Music</h3>
+            <select id="musicSelection">
+                <option value="none">No music</option>
+                <option value="classical">Classical</option>
+                <option value="lofi">Lo-fi</option>
+                <option value="rain">Rain sounds</option>
+            </select>
+            <audio id="audioPlayer" controls style="display:none;"></audio>
+        </section>
+
+        <section class="tasks-container">
+            <h3>Today's Tasks</h3>
+            <ul id="taskList"></ul>
+            <input type="text" id="newTask" placeholder="Add a new task">
+            <button id="addTaskBtn">Add Task</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made with ❤️ for productive study</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
